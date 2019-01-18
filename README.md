@@ -1,9 +1,6 @@
 # simple-ts-react-app
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Kornil/simple-ts-react-app.svg)](https://greenkeeper.io/)
-
 React starter project written in typescript, includes redux, webpack, babel, sass, jest & enzyme.
-
 
 ## Project structure
 
@@ -34,7 +31,6 @@ The boilerplate structure and files are the same as this repo minus the *bin* fo
 └── *README.md* this file
 ```
 
-
 ## Tests
 
 The testing environment is written in Jest and Enzyme.
@@ -45,8 +41,3 @@ While still basic, the default tests are easy to manage and expand, providing a 
 ## Tslint
 
 This project uses Typescript recommended specs plus Typescript react specs so you can write error-free react and typescript code, if you use Visual Studio Code, you can install tslint from the extension tab to activate this function, other editors just google _name of the editor + tslint_ you will find how to enable it for your editor.
-
-## How to contribute
-
-I wrote a [small guide](https://medium.com/@francesco.agnoletto/how-to-not-f-up-your-local-files-with-git-part-1-e0756c88fd3c) on how to contribute and the common etiquette to follow.
-

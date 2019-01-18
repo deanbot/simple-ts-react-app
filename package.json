@@ -10,9 +10,6 @@
   },
   "keywords": [],
   "author": "",
-  "bin": {
-    "simple-ty-app": "./bin/stra.js"
-  },
   "license": "ISC",
   "jest": {
     "roots": [
@@ -82,9 +79,12 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "@types/react-redux": "7.0.0",
     "fs-extra": "^7.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-router-dom": "^4.3.1"
+    "react-redux": "6.0.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "4.0.1"
   }
 }
