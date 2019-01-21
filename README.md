@@ -4,8 +4,6 @@ React starter project written in typescript, includes redux, webpack, babel, sas
 
 ## Project structure
 
-The boilerplate structure and files are the same as this repo minus the *bin* folder, everything else is exactly the same.
-
 ```
 *root*
 |

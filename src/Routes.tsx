@@ -14,6 +14,6 @@ const Routes = () => (
     />
     <Route path="/about" component={About} />
   </Switch>
-);
+)
 
-export default Routes;
+export default Routes
