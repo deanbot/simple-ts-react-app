@@ -11,4 +11,7 @@ node_modules
 .npm
 
 # Prod Bundle
-build
+dist
+
+# gui settings
+.vscode
