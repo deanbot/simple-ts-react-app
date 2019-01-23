@@ -9,25 +9,32 @@ export const initialState = {
 };
 
 // action types
-export const MADE_CHANGES = 'unsavedChanges/madeChanges';
-export const RESET_CHANGES = 'unsavedChanges/resetChanges';
+export const INCREMENT = 'counter/increment';
+export const DECREMENT = 'counter/decrement';
+export const RESET = 'counter/reset';
 
 // actions
 export const increment = () => ({
-  type: 'INCREMENT',
+  type: INCREMENT,
 })
 
 export const decrement = () => ({
-  type: 'DECREMENT',
+  type: DECREMENT,
+})
+
+export const reset = () => ({
+  type: RESET
 })
 
 // reducers
 const counterReducer = (state = 0, action: Action) => {
   switch (action.type) {
-    case 'INCREMENT':
+    case INCREMENT:
       return state + 1
-    case 'DECREMENT':
+    case DECREMENT:
       return state - 1
+    case RESET:
+      return 0
     default:
       return state
   }

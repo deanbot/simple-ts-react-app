@@ -1,0 +1,34 @@
+#masthead {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .navItems {
+    display: none;
+    @media(min-width: 600px) {
+      display: block;
+    }
+    .active {
+      .bp3-button.bp3-minimal {
+        box-shadow: none;
+        background: rgba(115, 134, 148, 0.3);
+        color: #182026;
+      }
+    }
+  }
+  .mobileNavItems {
+    position: absolute;
+    right: 15px;
+    @media(min-width: 600px) {
+      display: none;
+    }
+    .bp3-menu {
+      .bp3-menu-item {
+        .bp3-icon {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}

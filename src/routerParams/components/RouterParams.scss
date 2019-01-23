@@ -1,0 +1,32 @@
+.routerParams {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .content {
+    max-width: 300px;
+    margin: auto;
+    @media(min-width: 600px) {
+      margin: 0;
+    }
+  }
+  .contentMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px 0 20px 0;
+  }
+  .contentSub {
+    border-radius: 6px;
+    background: #ebf1f5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

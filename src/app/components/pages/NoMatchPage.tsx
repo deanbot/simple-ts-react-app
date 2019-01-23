@@ -1,8 +1,12 @@
+import { NonIdealState } from '@blueprintjs/core';
 import React from 'react';
 
 const NoMatchPage = () => (
   <div>
-    No Match
+    <NonIdealState
+      icon="error"
+      title="No route match found"
+    />
   </div>
 )
 
