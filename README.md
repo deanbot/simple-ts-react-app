@@ -2,7 +2,30 @@
 
 Starter project written in typescript 3, webpack 4, babel 7, react 16, react router 4, redux, sass, ~jest & enzyme~.
 
+# Get Started
+
+### Install and run
+
+```
+yarn
+yarn start
+```
+
+### Replace Demo
+
+Replace/Remove counter and routerParams components
+see Project Structure section
+
+# Commands
+
+* `yarn start` - launch dev server, launch linting and testing in watch mode
+* `yarn build` - build dist folder and launch the dist server
+
 ## Project structure
+
+'Feature first' and the app is a feature (aka no generic folders for all reducers, components, etc).
+
+router pages are stored in app/components/pages
 
 ```
 *root*
@@ -12,7 +35,7 @@ Starter project written in typescript 3, webpack 4, babel 7, react 16, react rou
 │   │   ├── */components/*
 │   │   │   ├── */pages/*
 │   │   │   │   ├── *CounterPage.tsx* Routing component containing Counter component
-│   │   │   │   ├── *HelloPage.tsx* Routing component containing Hello component
+│   │   │   │   ├── *RouterParamsPage.tsx* Routing component containing RouterParams component
 │   │   │   │   ├── *HomePage.tsx* Routing component for index
 │   │   │   │   └── *NoMatchPage.tsx* Routing component for 404
 │   │   │   └── *NavBar.tsx* navigation component with react router links
@@ -25,13 +48,14 @@ Starter project written in typescript 3, webpack 4, babel 7, react 16, react rou
 │   │   └── *index.d.ts* only "*.png" for now (to make images import work)
 │   ├── */counter/* contains 'counter' components, reducers, actions, etc
 │   │   ├── */components/* store
-│   │   │   ├── */Counter.tsx* counter component
+│   │   │   ├── */Counter.tsx* counter component using redux
+│   │   │   ├── */CounterStateful.tsx* counter component using component state
 │   │   │   └── */Counter.scss* counter sass styles
 │   │   └── *index.d.ts* single file for all 'counter' redux logic 
-│   ├── */hello/* contains 'hello' components
+│   ├── */routerParams/* contains 'routerParams' components
 │   │   └── */components/* store
-│   │       ├── */Hello.tsx* hello component
-│   │       └── */Hello.scss* hello sass styles
+│   │       ├── */RouterParams.tsx* router params component
+│   │       └── */RouterParams.scss* router params sass styles
 │   ├── *index.tsx* javascript entry point
 │   ├── *index.html* html template entry point
 │   ├── *style.scss* global styles
