@@ -6,10 +6,11 @@ Starter project written in typescript 3, webpack 4, babel 7, react 16, react rou
 
 ## Install and run
 
-```
-yarn
-yarn start
-```
+`yarn` or `npm i`
+
+`yarn start`
+
+_If you don't want to use yarn, update instances of `yarn run` in `package.json` scripts with `npm run`._
 
 ## Commands
 

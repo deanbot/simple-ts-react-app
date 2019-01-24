@@ -12,7 +12,7 @@
     "strict": true,
     "typeRoots": [
       "node_modules/@types",
-      "tools/custom-types"
+      "src/custom-types"
     ],
     // "baseUrl": ".",
     "moduleResolution": "node",
