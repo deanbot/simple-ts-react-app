@@ -11,7 +11,8 @@ interface LinkProps {
   to: string
 }
 
-const RouterMenuItem = (props: LinkProps) => (
+// Replicate react-router NavItem to present blueprint MenuItems
+const RouteMenuItem = (props: LinkProps) => (
   <Route
     path={props.to}
     exact={props.activeOnlyWhenExact}
@@ -53,12 +54,12 @@ class MobileNavMenu extends React.Component<MobileNavMenuProps, MobileNavMenuSta
       position={Position.BOTTOM_LEFT}
       content={
         <Menu>
-          <RouterMenuItem label="Home" to="/" activeOnlyWhenExact history={history} icon="home" />
-          <RouterMenuItem label="Router Params" to="/routerParams" activeOnlyWhenExact history={history} icon="path-search" />
-          <RouterMenuItem label="Counter" to="/counter" activeOnlyWhenExact history={history} icon="numerical" />
+          <RouteMenuItem label="Home" to="/" activeOnlyWhenExact history={history} icon="home" />
+          <RouteMenuItem label="Router Params" to="/routerParams" activeOnlyWhenExact history={history} icon="path-search" />
+          <RouteMenuItem label="Counter" to="/counter" activeOnlyWhenExact history={history} icon="numerical" />
 
           {/* // alternate 404 example url so it doesn't show as active */}
-          <RouterMenuItem label="404" to={history.location.pathname.indexOf('asdf') === -1 ? "/asdf" : "/dsaf"} activeOnlyWhenExact={true} history={history} icon="error" />
+          <RouteMenuItem label="404" to={history.location.pathname.indexOf('asdf') === -1 ? "/asdf" : "/dsaf"} activeOnlyWhenExact={true} history={history} icon="error" />
         </Menu>
       } >
       <Button icon="menu" onClick={this.handleToggleMenu} />

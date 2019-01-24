@@ -11,10 +11,15 @@ yarn
 yarn start
 ```
 
-### Replace Demo
+### Replace Demo Functionality
 
-Replace/Remove counter and routerParams components
-see Project Structure section
+* Replace/Remove counter and routerParams feature folders
+* Update Router to remove any demo pages (counter, routerParams, etc).
+* Update Header and MobileNavMenu to remove any links to demo pages.
+* Update `src/app/rootReducer.ts` to remove counter demo reducers.
+* Consider replacing blueprintjs ui framework as needed.
+
+See Project Structure section.
 
 # Commands
 
@@ -23,9 +28,11 @@ see Project Structure section
 
 ## Project structure
 
-'Feature first' and the app is a feature (aka no generic folders for all reducers, components, etc).
+'Feature first' and the app is a feature - aka no generic folders for all reducers, components, etc) and root app setup files (routes, store, etc..) are stored in `src/app`.
 
-router pages are stored in app/components/pages
+Features store components in `components` sub folder and, generally, all redux logic in the feature's `index.ts`.
+
+Router pages/destinations are stored in `app/components/pages`.
 
 ```
 *root*
@@ -38,8 +45,9 @@ router pages are stored in app/components/pages
 │   │   │   │   ├── *RouterParamsPage.tsx* Routing component containing RouterParams component
 │   │   │   │   ├── *HomePage.tsx* Routing component for index
 │   │   │   │   └── *NoMatchPage.tsx* Routing component for 404
-│   │   │   └── *NavBar.tsx* navigation component with react router links
-│   │   │   └── *Routes.tsx* routes component configured to map to various page components
+│   │   │   ├── *Header.tsx* component with nav via react router links
+│   │   │   ├── *Routes.tsx* routes component configured to map to various page components
+│   │   │   └── [etc..]
 │   │   ├── *configureStore.ts* setup for redux store
 │   │   ├── *index.ts* holds redux store state interface
 │   │   └── *rootReducers.ts* setup for redux reducers
