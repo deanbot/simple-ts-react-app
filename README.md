@@ -4,29 +4,32 @@ Starter project written in typescript 3, webpack 4, babel 7, react 16, react rou
 
 # Get Started
 
-### Install and run
+## Install and run
 
 ```
 yarn
 yarn start
 ```
 
-### Replace Demo Functionality
-
-* Replace/Remove counter and routerParams feature folders
-* Update Router to remove any demo pages (counter, routerParams, etc).
-* Update Header and MobileNavMenu to remove any links to demo pages.
-* Update `src/app/rootReducer.ts` to remove counter demo reducers.
-* Consider replacing blueprintjs ui framework as needed.
-
-See Project Structure section.
-
-# Commands
+## Commands
 
 * `yarn start` - launch dev server, launch linting and testing in watch mode
 * `yarn build` - build dist folder and launch the dist server
 
-## Project structure
+## Replace Demo Functionality
+
+* Replace/Remove counter and routerParams feature folders.
+* Update `src/app/Routes.tsx` to remove any demo pages (counter, routerParams, etc).
+* Update `src/app/components/Header.tsx` and `src/app/components/MobileNavMenu.tsx` to remove any links to demo pages.
+* Update `src/app/rootReducer.ts` to remove counter demo reducers.
+* Consider replacing blueprintjs ui framework as needed.
+* Update `README.md` (i.e. remove this readme section).
+
+See Project Structure section for general guidelines.
+
+
+
+# Project structure
 
 'Feature first' and the app is a feature - aka no generic folders for all reducers, components, etc) and root app setup files (routes, store, etc..) are stored in `src/app`.
 
@@ -59,7 +62,7 @@ Router pages/destinations are stored in `app/components/pages`.
 │   │   │   ├── */Counter.tsx* counter component using redux
 │   │   │   ├── */CounterStateful.tsx* counter component using component state
 │   │   │   └── */Counter.scss* counter sass styles
-│   │   └── *index.d.ts* single file for all 'counter' redux logic 
+│   │   └── *index.ts* single file for all 'counter' redux logic 
 │   ├── */routerParams/* contains 'routerParams' components
 │   │   └── */components/* store
 │   │       ├── */RouterParams.tsx* router params component
@@ -76,9 +79,9 @@ Router pages/destinations are stored in `app/components/pages`.
 └── [etc...]
 ```
 
-## WIP
+# WIP
 
-Testing not yet implemented 
+**Testing not yet implemented**
 
 ```
 ├── */tests/* contains test environment (Jest + Enzyme)
@@ -90,10 +93,4 @@ Testing not yet implemented
 ### Tests
 
 The testing environment is written in Jest and Enzyme.
-The included tests are very basic and only check the proper render of base components + routes, there are no snapshot tests, I did not feel they were needed being the components really basic, at the first change they would need to be updated, imho setting the wrong approach of _"hey tests are broken, let's regenerate snapshots again"_.
-While still basic, the default tests are easy to manage and expand, providing a smoother curve into testing with JavaScript and React.
-
-
-## Tslint
-
-This project uses Typescript recommended specs plus Typescript react specs so you can write error-free react and typescript code, if you use Visual Studio Code, you can install tslint from the extension tab to activate this function, other editors just google _name of the editor + tslint_ you will find how to enable it for your editor.
+The included tests are very basic and only check the proper render of base components + routes. There are no snapshot tests. While still basic, the default tests are easy to manage and expand, providing a smoother curve into testing with JavaScript and React.
