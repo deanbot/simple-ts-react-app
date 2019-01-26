@@ -9,7 +9,6 @@ const App = () => {
       <Header />
       <main>
         <div className='container'>
-          sdf
           {Routes}
         </div>
       </main>

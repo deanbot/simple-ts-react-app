@@ -1,4 +1,3 @@
-import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
@@ -61,7 +60,7 @@ export default {
   },
   plugins: dev
     ? [
-      new HardSourceWebpackPlugin(),
+      // new HardSourceWebpackPlugin(),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoEmitOnErrorsPlugin(),
       HTMLWebpackPluginConfig,
