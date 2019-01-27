@@ -1,7 +1,7 @@
-import React from 'react';
-import './App.scss';
-import Header from './Header';
-import Routes from './Routes';
+import React from 'react'
+import './App.scss'
+import Header from './Header'
+import Routes from './Routes'
 
 const App = () => {
   return (

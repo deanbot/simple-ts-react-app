@@ -1,13 +1,13 @@
 // react dependencies
-import { ConnectedRouter } from 'connected-react-router';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import { Provider } from 'react-redux';
-import App from './app/components/App';
-import configureStore, { history } from './app/configureStore';
-import './style.scss';
-require('./favicon.ico');
+import { ConnectedRouter } from 'connected-react-router'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import { Provider } from 'react-redux'
+import App from './app/components/App'
+import configureStore, { history } from './app/configureStore'
+import './favicon.ico'
+import './style.scss'
 
 const store = configureStore()
 
@@ -20,7 +20,7 @@ const render = () => {
         </ConnectedRouter>
       </Provider>
     </AppContainer>,
-    document.getElementById('app')
+    document.getElementById('app'),
   )
 }
 

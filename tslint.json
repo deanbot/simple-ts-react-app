@@ -15,6 +15,18 @@
     "jsx-no-multiline-js": [
       "error",
       "never"
+    ],
+    "member-access": [
+      false
+    ],
+    "semicolon": [
+      true,
+      "never"
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-single"
     ]
   }
 }

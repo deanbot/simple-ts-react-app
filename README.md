@@ -6,16 +6,22 @@ Starter project written in typescript 3, webpack 4, babel 7, react 16, react rou
 
 ## Install and run
 
-`yarn` or `npm i`
+`yarn`
 
 `yarn start`
-
-_If you don't want to use yarn, update instances of `yarn run` in `package.json` scripts with `npm run`._
 
 ## Commands
 
 * `yarn start` - launch dev server, launch linting and testing in watch mode
 * `yarn build` - build dist folder and launch the dist server
+
+Others:
+
+* `yarn lint` - run tslint
+* `yarn lint:fix` - run tslint with --fix argument
+* `yarn test` - run tests
+* `yarn test:watch` - run tests in watch mode
+* `yarn open:dist` - open the dist folder in a dev server
 
 ## Replace Demo Functionality
 

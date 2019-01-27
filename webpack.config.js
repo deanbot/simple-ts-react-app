@@ -1,7 +1,7 @@
-import HTMLWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import path from 'path';
-import webpack from 'webpack';
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+const webpack = require('webpack');
 
 const dev = process.env.NODE_ENV !== 'production';
 
@@ -33,7 +33,7 @@ const HTMLWebpackPluginConfig = dev
     },
   });
 
-export default {
+module.exports = {
   resolve: {
     extensions: ['*', '.ts', '.tsx', '.js', '.json'],
   },
@@ -51,7 +51,7 @@ export default {
     ]
     : path.resolve(__dirname, 'src/index'),
   target: 'web',
-  mode: dev ? 'development' : 'production',
+  mode: dev ? "development" : "production",
   output: {
     path: path.resolve(__dirname, './dist'),
     // Note: Physical files are only output by the production build task `npm run build`.

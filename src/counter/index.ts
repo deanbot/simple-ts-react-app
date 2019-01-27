@@ -1,17 +1,17 @@
-import { Action } from "redux";
+import { Action } from 'redux'
 
 // state constants
 export const NAME_COUNT = 'count'
 
 // initial state
 export const initialState = {
-  [NAME_COUNT]: 0
-};
+  [NAME_COUNT]: 0,
+}
 
 // action types
-export const INCREMENT = 'counter/increment';
-export const DECREMENT = 'counter/decrement';
-export const RESET = 'counter/reset';
+export const INCREMENT = 'counter/increment'
+export const DECREMENT = 'counter/decrement'
+export const RESET = 'counter/reset'
 
 // actions
 export const increment = () => ({
@@ -23,7 +23,7 @@ export const decrement = () => ({
 })
 
 export const reset = () => ({
-  type: RESET
+  type: RESET,
 })
 
 // reducers
@@ -41,5 +41,5 @@ const counterReducer = (state = 0, action: Action) => {
 }
 
 export const reducers = {
-  [NAME_COUNT]: counterReducer
+  [NAME_COUNT]: counterReducer,
 }

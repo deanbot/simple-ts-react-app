@@ -1,20 +1,20 @@
-import { Button, ButtonGroup } from '@blueprintjs/core';
-import React from 'react';
-import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
-import { decrement, increment, reset } from '../';
-import { IState } from '../../app';
-import './Counter.scss';
+import { Button, ButtonGroup } from '@blueprintjs/core'
+import React from 'react'
+import { connect } from 'react-redux'
+import { Dispatch } from 'redux'
+import { decrement, increment, reset } from '../'
+import { StoreState } from '../../app'
+import './Counter.scss'
 
 const Counter = (props: Props) => (
-  <div className="counter">
-    <p className="bp3-ui-text">Counter provided via redux state</p>
-    <div className="bp3-card bp3-interactive" onClick={props.reset}>
+  <div className='counter'>
+    <p className='bp3-ui-text'>Counter provided via redux state</p>
+    <div className='bp3-card bp3-interactive' onClick={props.reset}>
       Count: {props.count}
     </div>
-    <ButtonGroup className="buttonGroup">
-      <Button icon="plus" onClick={props.increment} />
-      <Button icon="minus" onClick={props.decrement} />
+    <ButtonGroup className='buttonGroup'>
+      <Button icon='plus' onClick={props.increment} />
+      <Button icon='minus' onClick={props.decrement} />
     </ButtonGroup>
   </div>
 )
@@ -26,13 +26,13 @@ interface Props {
   reset: () => void
 }
 
-const mapStateToProps = (state: IState) => ({
+const mapStateToProps = (state: StoreState) => ({
   count: state.count,
 })
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  increment: () => dispatch(increment()),
   decrement: () => dispatch(decrement()),
+  increment: () => dispatch(increment()),
   reset: () => dispatch(reset()),
 })
 

@@ -2,14 +2,41 @@
   "name": "simple-ts-react-app",
   "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": ".dist/index.js",
   "scripts": {
+    "clean": "rimraf dist",
+    "coverage": "cross-env NODE_ENV=test jest --coverage",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack.config.js --progress --profile --color --display-error-details --display-cached",
+    "prebuild": "yarn clean",
+    "lint": "tslint \"src/**/*.ts?(x)\"",
+    "lint:fix": "tslint \"src/**/*.ts?(x)\" --fix",
+    "open:src": "cross-env NODE_ENV=development node tools/srcServer.js",
+    "open:dist": "node tools/distServer.js",
     "startFinal": "npm-run-all --parallel test:watch open:src lint:watch",
     "start": "yarn run open:src",
-    "build": "babel-node tools/startBuild.js && npm run open:dist",
-    "test": "jest",
-    "open:src": "babel-node tools/startSrcServer.js",
-    "open:dist": "babel-node tools/startDistServer.js"
+    "test": "cross-env NODE_ENV=test jest",
+    "test:watch": "yarn test -o --watch"
+  },
+  "jest": {
+    "setupFiles": [
+      "./jest.setup.js"
+    ],
+    "moduleDirectories": [
+      "./node_modules",
+      "./src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "typescript-babel-jest"
+    },
+    "testMatch": [
+      "**/*.test.(ts|tsx|js)"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -22,7 +49,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.1.0",
+    "@babel/preset-typescript": "7.1.0",
     "@babel/register": "7.0.0",
     "@types/enzyme": "^3.1.11",
     "@types/enzyme-adapter-react-16": "^1.0.2",
@@ -39,6 +66,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
     "browser-sync": "2.26.3",
     "chalk": "2.4.2",
     "cross-env": "^5.2.0",
@@ -57,6 +85,7 @@
     "postcss-loader": "3.0.0",
     "react-hot-loader": "^4.3.3",
     "redux-immutable-state-invariant": "2.1.0",
+    "rimraf": "2.6.3",
     "sass-loader": "^7.0.3",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.23.1",
@@ -65,6 +94,7 @@
     "tslint-config-prettier": "^1.13.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.1.6",
+    "typescript-babel-jest": "1.0.5",
     "url-loader": "^1.0.1",
     "webpack": "^4.13.0",
     "webpack-cli": "^3.0.8",
@@ -77,12 +107,17 @@
     "@blueprintjs/icons": "3.5.1",
     "connected-react-router": "6.2.1",
     "fs-extra": "^7.0.1",
+    "history": "4.7.2",
     "normalize.css": "8.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "6.0.0",
+    "react-router": "4.3.1",
     "react-router-dom": "^4.3.1",
     "redux": "4.0.1",
     "redux-thunk": "2.3.0"
+  },
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge.0"
   }
 }

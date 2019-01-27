@@ -1,0 +1,37 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false,
+        "debug": true
+      }
+    ],
+    "@babel/typescript",
+    "@babel/react",
+  ],
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/env",
+          {
+            "modules": "commonjs",
+            "targets": {
+              "node": "current"
+            }
+          }
+        ],
+        "@babel/react",
+        "@babel/typescript"
+      ],
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
+}

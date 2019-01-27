@@ -1,7 +1,7 @@
-import { RouterState } from 'connected-react-router';
-import { NAME_COUNT } from '../counter';
+import { RouterState } from 'connected-react-router'
+import { NAME_COUNT } from '../counter'
 
-export interface IState {
+export interface StoreState {
   [NAME_COUNT]: number
   router: RouterState
 }
